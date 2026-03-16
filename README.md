@@ -1,4 +1,3 @@
-# pyauto_roadmap
 # PYTHON AUTOMATION ROADMAP
 ### My path to mastering Python for Automation Services
 
