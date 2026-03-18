@@ -25,7 +25,7 @@ This repository contains scripts and mini-projects developed to practice Python,
 
 ### 4. Integration & Communication Automation
 - [x] **Email Automation:** Sending automated HTML emails and reports using Outlook (`win32com.client`).
-- [ ] **Web Scraping & Browser Automation:** Interacting with web elements using Selenium or BeautifulSoup.
+- [x] **Web Scraping & Browser Automation:** Interacting with web elements using Selenium or BeautifulSoup.
 - [ ] **API Consumption:** Making HTTP requests with the `requests` library to integrate with external services.
 - [ ] **GUI Automation:** Controlling mouse and keyboard events using PyAutoGUI.
 
@@ -51,3 +51,14 @@ A data analysis and reporting automation script that processes a raw sales datas
 - **Data Aggregation & Math:** Using `.groupby()` to calculate total revenue ("Valor Final") and total products sold ("Quantidade") per store, as well as mathematically deriving the average ticket ("Ticket Médio").
 - **Email Automation (win32com):** Integrating directly with the local Windows Outlook application to dispatch automated emails (`win32.Dispatch`).
 - **HTML Formatting & String Interpolation:** Embedding Pandas DataFrames directly into an HTML email body (using f-strings) with custom currency formatters (`formatters={'Valor Final': 'R${:,.2f}'.format}`) to generate a professional, presentation-ready report.
+
+---
+
+#### Selenium_01
+A web automation script designed to autonomously open a browser, navigate to a specific landing page, and fill out a registration form.
+
+**Core Concepts Applied:**
+- **Browser Automation:** Using the `selenium` library to control a Google Chrome instance programmatically.
+- **Webdriver Management:** Utilizing `webdriver_manager` to automatically download and manage the correct ChromeDriver version, avoiding manual setup issues and version conflicts.
+- **Element Location (XPath):** Identifying and mapping HTML elements on the page (buttons, text fields) using specific XPath locators (`browser.find_element`).
+- **User Simulation:** Simulating human keyboard inputs (`.send_keys()`) and mouse clicks (`.click()`) to complete and submit a web form before closing the session (`.quit()`).
