@@ -11,7 +11,7 @@ This repository contains scripts and mini-projects developed to practice Python,
 - [x] **Basic Syntax & Data Structures:** Variables, Lists, Dictionaries, Tuples, and String manipulation.
 - [x] **Control Flow:** `if/elif/else` conditional statements and `for` loops.
 - [ ] **Functions & OOP:** Creating modular code, classes, and objects in Python.
-- [ ] **Exception Handling:** Managing runtime errors using `try/except` blocks.
+- [x] **Exception Handling:** Managing runtime errors using `try/except` blocks.
 
 ### 2. File & System Manipulation
 - [x] **OS Module:** Navigating directories, renaming, and moving files (`os.listdir`, `os.rename`).
@@ -26,7 +26,7 @@ This repository contains scripts and mini-projects developed to practice Python,
 ### 4. Integration & Communication Automation
 - [x] **Email Automation:** Sending automated HTML emails and reports using Outlook (`win32com.client`).
 - [x] **Web Scraping & Browser Automation:** Interacting with web elements using Selenium or BeautifulSoup.
-- [ ] **API Consumption:** Making HTTP requests with the `requests` library to integrate with external services.
+- [x] **API Consumption:** Making HTTP requests with the `requests` library to integrate with external services.
 - [ ] **GUI Automation:** Controlling mouse and keyboard events using PyAutoGUI.
 
 ---
@@ -73,3 +73,15 @@ A modern web automation script that utilizes the Playwright framework to launch 
 - **Context Management:** Employing the `with` statement (`sync_playwright() as p`) for robust resource management and clean teardown of the automation session.
 - **Element Location & Interaction:** Using Playwright's `locator` method combined with XPath to identify inputs and simulate precise user actions like typing (`.fill()`) and clicking (`.click()`).
 - **Execution Modes:** Operating the browser in "headed" mode (`headless=False`) to visually monitor the script's execution and form submission in real-time.
+
+---
+
+#### APIAcoes
+A robust data extraction script that integrates with the Alpha Vantage REST API to fetch real-time financial market data and aggregate it into a centralized Pandas DataFrame.
+
+**Core Concepts Applied:**
+- **API Consumption & HTTP Requests:** Using the `requests` library to construct dynamic GET requests and seamlessly fetch structured data from external endpoints.
+- **Exception Handling:** Implementing robust `try/except` blocks (`requests.exceptions.RequestException`, `response.raise_for_status()`) to gracefully handle network failures and HTTP errors without crashing the application.
+- **Environment Variable Management:** Utilizing the `python-dotenv` package (`load_dotenv()`) to securely manage and load sensitive credentials (like API keys) outside the source code.
+- **In-Memory Data Processing:** Using `io.StringIO` to instantly convert raw text responses from the API into Pandas DataFrames (`pd.read_csv()`) without needing to save intermediate physical files.
+- **State Management & Refactoring:** Encapsulating variables and execution flow within a structured `main()` function, eliminating the use of global variables for cleaner, more maintainable code.
