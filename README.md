@@ -62,3 +62,14 @@ A web automation script designed to autonomously open a browser, navigate to a s
 - **Webdriver Management:** Utilizing `webdriver_manager` to automatically download and manage the correct ChromeDriver version, avoiding manual setup issues and version conflicts.
 - **Element Location (XPath):** Identifying and mapping HTML elements on the page (buttons, text fields) using specific XPath locators (`browser.find_element`).
 - **User Simulation:** Simulating human keyboard inputs (`.send_keys()`) and mouse clicks (`.click()`) to complete and submit a web form before closing the session (`.quit()`).
+
+---
+
+#### Playwright
+A modern web automation script that utilizes the Playwright framework to launch a browser session, navigate to a promotional page, and automatically fill out a multi-field registration form.
+
+**Core Concepts Applied:**
+- **Modern Browser Control:** Utilizing the `playwright.sync_api` to launch and control a Chromium browser instance seamlessly.
+- **Context Management:** Employing the `with` statement (`sync_playwright() as p`) for robust resource management and clean teardown of the automation session.
+- **Element Location & Interaction:** Using Playwright's `locator` method combined with XPath to identify inputs and simulate precise user actions like typing (`.fill()`) and clicking (`.click()`).
+- **Execution Modes:** Operating the browser in "headed" mode (`headless=False`) to visually monitor the script's execution and form submission in real-time.
