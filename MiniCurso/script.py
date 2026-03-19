@@ -9,13 +9,16 @@ pd.set_option('display.max_columns', None)
 
 # faturamento por loja
 tabela_faturamento = tabela_vendas[['ID Loja', 'Valor Final']].groupby('ID Loja').sum()
+print(tabela_faturamento)
 
 # quantidade de produtos vendidos por loja
 tabela_produtos = tabela_vendas[['ID Loja', 'Quantidade']].groupby('ID Loja').sum()
+print(tabela_produtos)
 
 # ticket médio por produto em cada loja
 tabela_ticket_medio = (tabela_faturamento['Valor Final'] / tabela_produtos['Quantidade']).to_frame()
 tabela_ticket_medio = tabela_ticket_medio.rename(columns={0:'Ticket Médio'})
+print(tabela_ticket_medio)
 
 # enviar um email (via outlook) com um relatório
 
